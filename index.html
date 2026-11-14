@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nachttoernooi BC Assen | 14 mei 2027</title>
+<meta name="description" content="Badminton nachttoernooi van BC Assen in de Pittelohal, vrijdag 14 mei 2027 van 22:00 tot 06:00. Mix en dubbel, poules op tijd. Schrijf je in met je duo.">
+<meta name="theme-color" content="#07020f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Rajdhani:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07020f; --bg2:#100626; --pink:#ff2bd6; --cyan:#22f3ff; --lime:#b6ff3b; --violet:#8a5cff; --amber:#ffb627;
+  --text:#f1ecff; --muted:#a79fc4; --line:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{font-family:Rajdhani,system-ui,sans-serif;color:var(--text);background:var(--bg);font-size:19px;line-height:1.5;overflow-x:hidden}
+a{color:var(--cyan)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.mono{font-family:VT323,monospace;letter-spacing:.06em}
+::selection{background:var(--pink);color:#000}
+
+/* sterrenhemel */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(1px 1px at 12% 18%,#fff8,transparent),radial-gradient(1px 1px at 72% 9%,#fff9,transparent),
+    radial-gradient(1.5px 1.5px at 40% 30%,#fff7,transparent),radial-gradient(1px 1px at 88% 40%,#fff6,transparent),
+    radial-gradient(1px 1px at 22% 62%,#fff5,transparent),radial-gradient(1.5px 1.5px at 60% 75%,#fff6,transparent),
+    radial-gradient(1px 1px at 6% 88%,#fff5,transparent),radial-gradient(1px 1px at 94% 82%,#fff7,transparent),
+    radial-gradient(60% 50% at 50% 0%,#2a0b55 0%,transparent 70%),
+    radial-gradient(40% 40% at 100% 60%,#3b0a3f55,transparent 70%),
+    var(--bg)}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;backdrop-filter:blur(10px);background:#07020fb3;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .logo{font-family:VT323,monospace;font-size:24px;color:var(--lime);text-decoration:none;text-shadow:0 0 8px var(--lime)}
+nav .links{display:flex;gap:22px}
+nav .links a{color:var(--muted);text-decoration:none;font-weight:600;text-transform:uppercase;font-size:15px;letter-spacing:.1em}
+nav .links a:hover{color:var(--text)}
+@media(max-width:700px){nav .links a:not(.btn-sm){display:none}}
+.btn-sm{color:#000!important;background:var(--lime);padding:6px 14px;border-radius:999px;box-shadow:0 0 16px var(--lime)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:110px 0 220px}
+.kicker{font-family:VT323,monospace;font-size:24px;color:var(--cyan);letter-spacing:.3em;text-transform:uppercase;text-shadow:0 0 10px var(--cyan)}
+h1{font-family:Monoton,cursive;font-weight:400;line-height:1;margin:18px 0 8px;font-size:clamp(48px,11vw,150px);color:#fff;
+  text-shadow:0 0 4px #fff,0 0 12px var(--pink),0 0 28px var(--pink),0 0 60px var(--pink)}
+h1 .b{display:block;color:#fff;text-shadow:0 0 4px #fff,0 0 12px var(--cyan),0 0 28px var(--cyan),0 0 60px var(--cyan)}
+h1 .f{animation:flicker 6s infinite}
+@keyframes flicker{0%,18%,22%,25%,53%,57%,100%{opacity:1}20%,24%,55%{opacity:.25}}
+.date{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-top:22px;font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:.12em}
+.date span{padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:#ffffff08}
+.date .hl{border-color:var(--lime);color:var(--lime);box-shadow:0 0 14px #b6ff3b55,inset 0 0 14px #b6ff3b33}
+
+.countdown{display:flex;justify-content:center;gap:12px;margin:36px 0 34px}
+.cd{min-width:84px;padding:12px 8px 6px;border:1px solid #22f3ff55;border-radius:12px;background:#22f3ff0d;box-shadow:0 0 20px #22f3ff22,inset 0 0 20px #22f3ff14}
+.cd b{display:block;font-family:VT323,monospace;font-size:52px;line-height:1;color:var(--cyan);text-shadow:0 0 12px var(--cyan)}
+.cd small{font-size:13px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase}
+@media(max-width:480px){.cd{min-width:66px}.cd b{font-size:40px}}
+
+.btn{display:inline-block;font:700 20px Rajdhani,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#0b0118;background:var(--pink);
+  padding:16px 34px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 0 0 2px #ff2bd655,0 0 28px var(--pink),0 0 70px #ff2bd677;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 0 2px #ff2bd699,0 0 40px var(--pink),0 0 100px #ff2bd6aa}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+.sub{margin-top:14px;color:var(--muted);font-size:16px}
+
+/* neon badmintonveld als vloer */
+.floor{position:absolute;left:50%;bottom:-40px;width:min(560px,90vw);transform:translateX(-50%) perspective(700px) rotateX(64deg);transform-origin:50% 100%;pointer-events:none;
+  filter:drop-shadow(0 0 6px var(--cyan)) drop-shadow(0 0 18px var(--cyan));opacity:.85}
+.floor svg{display:block;width:100%;height:auto}
+.floor .net{stroke:var(--pink);filter:drop-shadow(0 0 8px var(--pink))}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+
+/* vliegende shuttle */
+.shuttle{position:absolute;top:0;left:0;width:46px;height:46px;pointer-events:none;offset-path:path("M -60 520 Q 50vw -120 110vw 420");offset-rotate:auto;animation:fly 5.5s cubic-bezier(.35,.1,.55,.9) infinite;
+  filter:drop-shadow(0 0 6px #fff) drop-shadow(0 0 16px var(--lime))}
+@keyframes fly{0%{offset-distance:0%;opacity:0}8%{opacity:1}85%{opacity:1}100%{offset-distance:100%;opacity:0}}
+
+/* secties */
+section{padding:110px 0;position:relative}
+.eyebrow{font-family:VT323,monospace;font-size:22px;letter-spacing:.3em;text-transform:uppercase;color:var(--pink);text-shadow:0 0 10px var(--pink)}
+h2{font-size:clamp(34px,5.5vw,62px);line-height:1.05;margin:8px 0 22px;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+h2 em{font-style:normal;color:var(--cyan);text-shadow:0 0 18px #22f3ffaa}
+.lead{font-size:22px;color:#d9d2f2;max-width:720px}
+
+/* nostalgie */
+.retro{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
+@media(max-width:860px){.retro{grid-template-columns:1fr}}
+.tape{position:relative;aspect-ratio:1.6;border-radius:18px;background:linear-gradient(135deg,#1b0b3a,#0c0420);border:1px solid #8a5cff55;box-shadow:0 0 50px #8a5cff33;overflow:hidden;display:grid;place-items:center}
+.tape .lbl{position:absolute;top:16px;left:18px;right:18px;padding:8px 14px;border-radius:6px;background:repeating-linear-gradient(90deg,var(--pink) 0 25%,var(--amber) 25% 50%,var(--lime) 50% 75%,var(--cyan) 75% 100%);
+  color:#0b0118;font-family:VT323,monospace;font-size:24px;text-align:center;letter-spacing:.1em}
+.reels{display:flex;gap:70px;margin-top:40px}
+.reel{width:76px;height:76px;border-radius:50%;border:3px dashed var(--cyan);box-shadow:0 0 18px #22f3ff77;animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tape .side{position:absolute;bottom:14px;right:18px;font-family:VT323,monospace;color:var(--muted);font-size:20px}
+
+/* kaarten */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{position:relative;padding:30px 26px;border-radius:18px;background:linear-gradient(180deg,#ffffff0c,#ffffff04);border:1px solid var(--line);transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 0 30px color-mix(in srgb,var(--c) 35%,transparent)}
+.card .ic{font-family:VT323,monospace;font-size:46px;line-height:1;color:var(--c);text-shadow:0 0 14px var(--c)}
+.card h3{font-size:26px;text-transform:uppercase;margin:12px 0 6px;letter-spacing:.04em}
+.card p{color:var(--muted)}
+
+/* tijdbalk */
+.night{margin-top:50px;padding:28px;border-radius:18px;border:1px solid var(--line);background:#ffffff05}
+.bar{position:relative;height:16px;border-radius:999px;background:linear-gradient(90deg,var(--violet),var(--pink),var(--amber),var(--cyan));box-shadow:0 0 24px #ff2bd677;margin:18px 0 10px}
+.ticks{display:flex;justify-content:space-between;font-family:VT323,monospace;font-size:22px;color:var(--muted)}
+.ticks b{color:var(--text)}
+.night .ends{display:flex;justify-content:space-between;margin-top:6px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:15px}
+.night .ends span:first-child{color:var(--pink)}.night .ends span:last-child{color:var(--cyan)}
+@media(max-width:560px){.ticks span:nth-child(even){visibility:hidden}}
+
+/* categorieen */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+@media(max-width:860px){.cats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.cats{grid-template-columns:1fr}}
+.cat{position:relative;padding:26px 22px;border-radius:16px;border:1.5px solid var(--c);background:color-mix(in srgb,var(--c) 7%,transparent);
+  box-shadow:0 0 18px color-mix(in srgb,var(--c) 30%,transparent),inset 0 0 22px color-mix(in srgb,var(--c) 12%,transparent);overflow:hidden}
+.cat .k{font-family:VT323,monospace;font-size:20px;letter-spacing:.2em;color:var(--c);text-transform:uppercase}
+.cat .n{font-size:30px;font-weight:700;text-transform:uppercase;line-height:1.1;margin-top:4px}
+.cat .lvl{display:inline-block;margin-top:12px;padding:3px 12px;border-radius:999px;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--c);color:#0b0118}
+.cat .lvl.r{background:transparent;color:var(--c);border:1px solid var(--c)}
+.cat::after{content:attr(data-g);position:absolute;right:-6px;bottom:-26px;font-family:Monoton,cursive;font-size:110px;color:var(--c);opacity:.12}
+
+/* inschrijven */
+.signup{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:start}
+@media(max-width:900px){.signup{grid-template-columns:1fr}}
+.facts{list-style:none;display:grid;gap:12px;margin-top:26px}
+.facts li{display:flex;gap:14px;align-items:baseline;padding:14px 18px;border-radius:12px;background:#ffffff07;border:1px solid var(--line)}
+.facts b{font-family:VT323,monospace;font-size:26px;color:var(--lime);min-width:96px;text-shadow:0 0 10px #b6ff3b88}
+form{padding:30px;border-radius:22px;background:linear-gradient(180deg,#1a0a36cc,#0d0420cc);border:1px solid #ff2bd655;box-shadow:0 0 60px #ff2bd622}
+fieldset{border:0;margin-bottom:22px}
+legend{font-family:VT323,monospace;font-size:24px;letter-spacing:.15em;color:var(--cyan);margin-bottom:10px;text-transform:uppercase}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.row{grid-template-columns:1fr}form{padding:22px 18px}}
+label{display:block;font-size:15px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+input,select,textarea{display:block;width:100%;margin-top:6px;font:600 18px Rajdhani,sans-serif;color:var(--text);background:#07020f;border:1px solid #ffffff22;border-radius:10px;padding:12px 14px;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 16px #22f3ff55;outline:none}
+.radios{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(max-width:420px){.radios{grid-template-columns:1fr}}
+.radios label{position:relative;cursor:pointer}
+.radios input{position:absolute;opacity:0;pointer-events:none}
+.radios span{display:block;padding:12px 14px;border-radius:10px;border:1px solid #ffffff22;color:var(--text);text-transform:none;font-size:17px;letter-spacing:0;transition:all .15s}
+.radios input:checked+span{border-color:var(--lime);color:var(--lime);background:#b6ff3b12;box-shadow:0 0 16px #b6ff3b55}
+.radios input:focus-visible+span{outline:3px solid var(--lime);outline-offset:2px}
+.check{display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:16px;margin:4px 0 22px}
+.check input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--lime)}
+.msg{margin-top:18px;padding:14px 18px;border-radius:12px;display:none;font-weight:600}
+.msg.ok{display:block;border:1px solid var(--lime);color:var(--lime);background:#b6ff3b10}
+.msg.err{display:block;border:1px solid var(--amber);color:var(--amber);background:#ffb62710}
+
+footer{padding:60px 0 50px;border-top:1px solid var(--line);text-align:center;color:var(--muted)}
+footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#fff;text-shadow:0 0 14px var(--pink),0 0 40px var(--pink);margin-bottom:12px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .shuttle{display:none}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">BC ASSEN // NACHT</a>
+  <div class="links">
+    <a href="#ervaring">Ervaring</a><a href="#hoe">Hoe</a><a href="#categorieen">Categorieën</a><a class="btn-sm" href="#inschrijven">Inschrijven</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <svg class="shuttle" viewBox="0 0 48 48" aria-hidden="true">
+    <path d="M24 30 L10 6 L18 4 L24 3 L30 4 L38 6 Z" fill="none" stroke="#fff" stroke-width="2"/>
+    <path d="M17 5 L22 30 M31 5 L26 30 M24 3 V30" stroke="#ffffffaa" stroke-width="1.2"/>
+    <circle cx="24" cy="36" r="7" fill="#b6ff3b"/>
+  </svg>
+  <div class="wrap">
+    <p class="kicker">BC Assen presenteert</p>
+    <h1><span class="f">Nacht</span><span class="b">toernooi</span></h1>
+    <div class="date">
+      <span class="hl">Vr 14 mei 2027</span><span>22:00 - 06:00</span><span>Pittelohal Assen</span>
+    </div>
+    <div class="countdown" id="cd" aria-label="Aftellen tot de eerste shuttle">
+      <div class="cd"><b id="d">--</b><small>dagen</small></div>
+      <div class="cd"><b id="h">--</b><small>uur</small></div>
+      <div class="cd"><b id="m">--</b><small>min</small></div>
+      <div class="cd"><b id="s">--</b><small>sec</small></div>
+    </div>
+    <a class="btn" href="#inschrijven">Schrijf je duo in</a>
+    <p class="sub">Inschrijven tot 1 mei 2027 · vol = vol bij 50 duo's</p>
+  </div>
+  <div class="floor" aria-hidden="true">
+    <svg viewBox="-10 -10 630 1360" fill="none" stroke="#22f3ff" stroke-width="5">
+      <rect x="0" y="0" width="610" height="1340"/>
+      <line x1="46" y1="0" x2="46" y2="1340"/><line x1="564" y1="0" x2="564" y2="1340"/>
+      <line x1="0" y1="76" x2="610" y2="76"/><line x1="0" y1="1264" x2="610" y2="1264"/>
+      <line x1="0" y1="472" x2="610" y2="472"/><line x1="0" y1="868" x2="610" y2="868"/>
+      <line x1="305" y1="0" x2="305" y2="472"/><line x1="305" y1="868" x2="305" y2="1340"/>
+      <line class="net" x1="-10" y1="670" x2="620" y2="670" stroke-width="9"/>
+    </svg>
+  </div>
+</header>
+
+<main>
+<section id="ervaring">
+  <div class="wrap retro">
+    <div class="reveal">
+      <p class="eyebrow">Weet je nog?</p>
+      <h2>Spelen tot de <em>zon</em> opkomt</h2>
+      <p class="lead">Een volle hal, muziek aan, en doorspelen tot je benen het opgeven. Het nachttoernooi is terug, precies zoals vroeger. Geen gedoe, wel veel wedstrijden, oude bekenden en een nacht die je niet vergeet.</p>
+      <p class="lead" style="margin-top:16px">Het gaat om de ervaring. Pak je oude racket, zoek je vaste maatje van toen en kom terug naar de baan.</p>
+    </div>
+    <div class="tape reveal" aria-hidden="true">
+      <div class="lbl">NACHTTOERNOOI MIXTAPE</div>
+      <div class="reels"><div class="reel"></div><div class="reel"></div></div>
+      <div class="side">SIDE A · 22:00</div>
+    </div>
+  </div>
+</section>
+
+<section id="hoe">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Zo werkt het</p>
+      <h2>Acht uur. <em>Non-stop</em> badminton.</h2>
+    </div>
+    <div class="cards">
+      <div class="card reveal" style="--c:var(--pink)"><div class="ic">[01]</div><h3>Poules op tijd</h3><p>Je speelt in poules met wedstrijden op tijd. Fluit is fluit, en dan door naar de volgende baan.</p></div>
+      <div class="card reveal" style="--c:var(--cyan)"><div class="ic">[02]</div><h3>Mix en dubbel</h3><p>Schrijf je in met je duo: herendubbel, damesdubbel of mix. Elke categorie in een competitie- en een recreantenklasse.</p></div>
+      <div class="card reveal" style="--c:var(--lime)"><div class="ic">[03]</div><h3>De hele nacht</h3><p>Van 22:00 tot 06:00 in de Pittelohal in Assen. Georganiseerd door BC Assen.</p></div>
+    </div>
+    <div class="night reveal" aria-label="Tijdlijn van 22:00 tot 06:00">
+      <div class="ticks mono"><span><b>22</b></span><span>23</span><span>00</span><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span><b>06</b></span></div>
+      <div class="bar"></div>
+      <div class="ends"><span>Eerste shuttle</span><span>Laatste punt</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="categorieen">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Kies je klasse</p>
+      <h2>Zes <em>categorieën</em></h2>
+      <p class="lead">Competitie voor wie wekelijks competitie speelt, recreant voor iedereen die het vooral voor de lol doet.</p>
+    </div>
+    <div class="cats">
+      <div class="cat reveal" data-g="HD" style="--c:var(--cyan)"><div class="k">Dubbel</div><div class="n">Heren</div><span class="lvl">Competitie</span></div>
+      <div class="cat reveal" data-g="DD" style="--c:var(--pink)"><div class="k">Dubbel</div><div class="n">Dames</div><span class="lvl">Competitie</span></div>
+      <div class="cat reveal" data-g="GD" style="--c:var(--lime)"><div class="k">Mix</div><div class="n">Gemengd</div><span class="lvl">Competitie</span></div>
+      <div class="cat reveal" data-g="HD" style="--c:var(--cyan)"><div class="k">Dubbel</div><div class="n">Heren</div><span class="lvl r">Recreant</span></div>
+      <div class="cat reveal" data-g="DD" style="--c:var(--pink)"><div class="k">Dubbel</div><div class="n">Dames</div><span class="lvl r">Recreant</span></div>
+      <div class="cat reveal" data-g="GD" style="--c:var(--lime)"><div class="k">Mix</div><div class="n">Gemengd</div><span class="lvl r">Recreant</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="inschrijven">
+  <div class="wrap signup">
+    <div class="reveal">
+      <p class="eyebrow">Doe mee</p>
+      <h2>Schrijf je <em>duo</em> in</h2>
+      <p class="lead">Je schrijft je in als duo. Eén inschrijving per koppel.</p>
+      <ul class="facts">
+        <li><b>01.05</b><span>Inschrijving sluit op 1 mei 2027</span></li>
+        <li><b>50</b><span>Maximaal 50 duo's, vol is vol</span></li>
+        <li><b>22-06</b><span>Vrijdag 14 mei 2027, Pittelohal Assen</span></li>
+      </ul>
+    </div>
+
+    <form id="form" class="reveal" novalidate>
+      <fieldset>
+        <legend>Speler 1</legend>
+        <div class="row">
+          <label>Naam<input name="speler1_naam" autocomplete="name" required></label>
+          <label>E-mail<input name="speler1_email" type="email" autocomplete="email" required></label>
+        </div>
+        <label style="margin-top:14px">Telefoon<input name="speler1_telefoon" type="tel" autocomplete="tel" required></label>
+      </fieldset>
+      <fieldset>
+        <legend>Speler 2</legend>
+        <div class="row">
+          <label>Naam<input name="speler2_naam" required></label>
+          <label>E-mail<input name="speler2_email" type="email" required></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Categorie</legend>
+        <div class="radios" role="radiogroup">
+          <label><input type="radio" name="categorie" value="Heren competitie" required><span>Heren competitie</span></label>
+          <label><input type="radio" name="categorie" value="Heren recreant"><span>Heren recreant</span></label>
+          <label><input type="radio" name="categorie" value="Dames competitie"><span>Dames competitie</span></label>
+          <label><input type="radio" name="categorie" value="Dames recreant"><span>Dames recreant</span></label>
+          <label><input type="radio" name="categorie" value="Mix competitie"><span>Mix competitie</span></label>
+          <label><input type="radio" name="categorie" value="Mix recreant"><span>Mix recreant</span></label>
+        </div>
+      </fieldset>
+      <label>Opmerking (optioneel)<textarea name="opmerking" rows="3"></textarea></label>
+      <label class="check" style="margin-top:18px"><input type="checkbox" name="akkoord" required>Wij komen allebei en geven ons op voor het nachttoernooi van 14 mei 2027.</label>
+      <button class="btn" type="submit" id="submit">Verstuur inschrijving</button>
+      <div class="msg" id="msg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="big">Tot in de nacht</div>
+  <p>Nachttoernooi · georganiseerd door BC Assen · <a href="https://www.google.com/maps/search/?api=1&query=Pittelohal+Assen" target="_blank" rel="noopener">Pittelohal, Assen</a></p>
+</footer>
+
+<script>
+// Vul hier later het formulier-endpoint in (bijv. Formspree of Web3Forms). Leeg = niet gekoppeld.
+const FORM_ENDPOINT = "";
+const START = new Date("2027-05-14T22:00:00+02:00");
+const DEADLINE = new Date("2027-05-02T00:00:00+02:00"); // t/m 1 mei
+
+const pad = n => String(n).padStart(2, "0");
+function tick() {
+  const ms = Math.max(0, START - Date.now());
+  document.getElementById("d").textContent = Math.floor(ms / 864e5);
+  document.getElementById("h").textContent = pad(Math.floor(ms / 36e5) % 24);
+  document.getElementById("m").textContent = pad(Math.floor(ms / 6e4) % 60);
+  document.getElementById("s").textContent = pad(Math.floor(ms / 1e3) % 60);
+}
+tick(); setInterval(tick, 1000);
+
+const form = document.getElementById("form"), msg = document.getElementById("msg"), btn = document.getElementById("submit");
+const say = (text, cls) => { msg.textContent = text; msg.className = "msg " + cls; };
+
+if (Date.now() >= DEADLINE) {
+  [...form.elements].forEach(el => el.disabled = true);
+  say("De inschrijving is gesloten.", "err");
+}
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  if (!FORM_ENDPOINT) { say("Let op: het formulier is nog niet gekoppeld. Je inschrijving is NIET verstuurd.", "err"); return; }
+  btn.disabled = true;
+  try {
+    const res = await fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+    if (!res.ok) throw new Error(res.status);
+    form.reset();
+    say("Ingeschreven! Je krijgt een bevestiging per e-mail. Tot 14 mei.", "ok");
+  } catch {
+    say("Versturen mislukt. Probeer het opnieuw.", "err");
+  } finally { btn.disabled = false; }
+});
+
+const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { threshold: .15 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
