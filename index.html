@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nachttoernooi BC Assen | 14 mei 2027</title>
-<meta name="description" content="Badminton nachttoernooi van BC Assen in de Pittelohal, vrijdag 14 mei 2027 van 22:00 tot 06:00. Mix en dubbel, poules op tijd. Schrijf je in met je duo.">
+<title>Nachttoernooi BC Assen | 16 april 2027</title>
+<meta name="description" content="Badminton nachttoernooi van BC Assen in de Pittelohal, vrijdag 16 april 2027 van 22:00 tot 06:00. Mix en dubbel, poules op tijd. Schrijf je in met je duo.">
 <meta name="theme-color" content="#07020f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +51,8 @@ h1{font-family:Monoton,cursive;font-weight:400;line-height:1;margin:18px 0 8px;f
 h1 .b{display:block;color:#fff;text-shadow:0 0 4px #fff,0 0 12px var(--cyan),0 0 28px var(--cyan),0 0 60px var(--cyan)}
 h1 .f{animation:flicker 6s infinite}
 @keyframes flicker{0%,18%,22%,25%,53%,57%,100%{opacity:1}20%,24%,55%{opacity:.25}}
+.clublogo{display:block;height:90px;width:auto;margin:0 auto 18px;filter:drop-shadow(0 0 14px #22f3ff88)}
+.night .ends{gap:12px;text-align:right}
 .date{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-top:22px;font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:.12em}
 .date span{padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:#ffffff08}
 .date .hl{border-color:var(--lime);color:var(--lime);box-shadow:0 0 14px #b6ff3b55,inset 0 0 14px #b6ff3b33}
@@ -183,10 +185,11 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
     <circle cx="24" cy="36" r="7" fill="#b6ff3b"/>
   </svg>
   <div class="wrap">
+    <img class="clublogo" src="logo.png" alt="BC Assen" onerror="this.remove()">
     <p class="kicker">BC Assen presenteert</p>
     <h1><span class="f">Nacht</span><span class="b">toernooi</span></h1>
     <div class="date">
-      <span class="hl">Vr 14 mei 2027</span><span>22:00 - 06:00</span><span>Pittelohal Assen</span>
+      <span class="hl">Vr 16 apr 2027</span><span>22:00 - 06:00</span><span>Pittelohal Assen</span>
     </div>
     <div class="countdown" id="cd" aria-label="Aftellen tot de eerste shuttle">
       <div class="cd"><b id="d">--</b><small>dagen</small></div>
@@ -195,7 +198,7 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
       <div class="cd"><b id="s">--</b><small>sec</small></div>
     </div>
     <a class="btn" href="#inschrijven">Schrijf je duo in</a>
-    <p class="sub">Inschrijven tot 1 mei 2027 · vol = vol bij 50 duo's</p>
+    <p class="sub">Inschrijven tot 1 april 2027 · vol = vol bij 50 duo's</p>
   </div>
   <div class="floor" aria-hidden="true">
     <svg viewBox="-10 -10 630 1360" fill="none" stroke="#22f3ff" stroke-width="5">
@@ -235,12 +238,12 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
     <div class="cards">
       <div class="card reveal" style="--c:var(--pink)"><div class="ic">[01]</div><h3>Poules op tijd</h3><p>Je speelt in poules met wedstrijden op tijd. Fluit is fluit, en dan door naar de volgende baan.</p></div>
       <div class="card reveal" style="--c:var(--cyan)"><div class="ic">[02]</div><h3>Mix en dubbel</h3><p>Schrijf je in met je duo: herendubbel, damesdubbel of mix. Elke categorie in een competitie- en een recreantenklasse.</p></div>
-      <div class="card reveal" style="--c:var(--lime)"><div class="ic">[03]</div><h3>De hele nacht</h3><p>Van 22:00 tot 06:00 in de Pittelohal in Assen. Georganiseerd door BC Assen.</p></div>
+      <div class="card reveal" style="--c:var(--lime)"><div class="ic">[03]</div><h3>Soep en ontbijt</h3><p>Voor €30 per duo krijg je de hele nacht badminton, soep en krentenbollen als ontbijt. Om 06:15 volgt de prijsuitreiking.</p></div>
     </div>
     <div class="night reveal" aria-label="Tijdlijn van 22:00 tot 06:00">
       <div class="ticks mono"><span><b>22</b></span><span>23</span><span>00</span><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span><b>06</b></span></div>
       <div class="bar"></div>
-      <div class="ends"><span>Eerste shuttle</span><span>Laatste punt</span></div>
+      <div class="ends"><span>22:00 eerste shuttle</span><span>06:00 laatste punt · 06:15 prijsuitreiking</span></div>
     </div>
   </div>
 </section>
@@ -270,9 +273,10 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
       <h2>Schrijf je <em>duo</em> in</h2>
       <p class="lead">Je schrijft je in als duo. Eén inschrijving per koppel.</p>
       <ul class="facts">
-        <li><b>01.05</b><span>Inschrijving sluit op 1 mei 2027</span></li>
+        <li><b>€30</b><span>Per duo, inclusief soep en krentenbollen als ontbijt</span></li>
+        <li><b>01.04</b><span>Inschrijving sluit op 1 april 2027</span></li>
         <li><b>50</b><span>Maximaal 50 duo's, vol is vol</span></li>
-        <li><b>22-06</b><span>Vrijdag 14 mei 2027, Pittelohal Assen</span></li>
+        <li><b>22-06</b><span>Vrijdag 16 april 2027, Pittelohal Assen</span></li>
       </ul>
     </div>
 
@@ -304,7 +308,7 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
         </div>
       </fieldset>
       <label>Opmerking (optioneel)<textarea name="opmerking" rows="3"></textarea></label>
-      <label class="check" style="margin-top:18px"><input type="checkbox" name="akkoord" required>Wij komen allebei en geven ons op voor het nachttoernooi van 14 mei 2027.</label>
+      <label class="check" style="margin-top:18px"><input type="checkbox" name="akkoord" required>Wij komen allebei en geven ons op voor het nachttoernooi van 16 april 2027.</label>
       <button class="btn" type="submit" id="submit">Verstuur inschrijving</button>
       <div class="msg" id="msg" role="status" aria-live="polite"></div>
     </form>
@@ -320,8 +324,8 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
 <script>
 // Vul hier later het formulier-endpoint in (bijv. Formspree of Web3Forms). Leeg = niet gekoppeld.
 const FORM_ENDPOINT = "";
-const START = new Date("2027-05-14T22:00:00+02:00");
-const DEADLINE = new Date("2027-05-02T00:00:00+02:00"); // t/m 1 mei
+const START = new Date("2027-04-16T22:00:00+02:00");
+const DEADLINE = new Date("2027-04-02T00:00:00+02:00"); // t/m 1 april
 
 const pad = n => String(n).padStart(2, "0");
 function tick() {
@@ -350,7 +354,7 @@ form.addEventListener("submit", async e => {
     const res = await fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
     if (!res.ok) throw new Error(res.status);
     form.reset();
-    say("Ingeschreven! Je krijgt een bevestiging per e-mail. Tot 14 mei.", "ok");
+    say("Ingeschreven! Je krijgt een bevestiging per e-mail. Tot 16 april.", "ok");
   } catch {
     say("Versturen mislukt. Probeer het opnieuw.", "err");
   } finally { btn.disabled = false; }
