@@ -214,7 +214,7 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
       <div class="cd"><b id="s">--</b><small>sec</small></div>
     </div>
     <a class="btn" href="#inschrijven">Schrijf je duo in</a>
-    <p class="sub">Inschrijven tot 1 april 2027 · vol = vol bij 50 duo's</p>
+    <p class="sub">Inschrijven tot 1 april 2027 · vol is vol bij 50 duo's</p>
   </div>
   <div class="floor" aria-hidden="true">
     <svg viewBox="-10 -10 630 1360" fill="none" stroke="#22f3ff" stroke-width="5">
@@ -292,7 +292,7 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
         <li><b>€30</b><span>Per duo</span></li>
         <li><b>01.04</b><span>Inschrijving sluit op 1 april 2027</span></li>
         <li><b>50</b><span>Maximaal 50 duo's, vol is vol</span></li>
-        <li><b>22-06</b><span>Vrijdag 16 april 2027, Pittelohal Assen</span></li>
+        <li><b>22:00</b><span>Vrijdag 16 april 2027 tot 06:00, Pittelohal Assen</span></li>
       </ul>
     </div>
 
@@ -370,7 +370,7 @@ form.addEventListener("submit", async e => {
     const res = await fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
     if (!res.ok) throw new Error(res.status);
     form.reset();
-    say("Ingeschreven! Je krijgt een bevestiging per e-mail. Tot 16 april.", "ok");
+    say("Ingeschreven! Tot 16 april.", "ok");
   } catch {
     say("Versturen mislukt. Probeer het opnieuw.", "err");
   } finally { btn.disabled = false; }
