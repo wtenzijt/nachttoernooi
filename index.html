@@ -34,7 +34,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
     var(--bg)}
 
 /* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:20;backdrop-filter:blur(10px);background:#07020fb3;border-bottom:1px solid var(--line)}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:#07020f;border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 nav .logo{font-family:VT323,monospace;font-size:24px;color:var(--lime);text-decoration:none;text-shadow:0 0 8px var(--lime)}
 nav .links{display:flex;gap:22px}
@@ -163,6 +163,27 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 
+/* extra animaties */
+.kicker{animation:kick 4s infinite}
+@keyframes kick{0%,100%{opacity:1}91%{opacity:1}92%{opacity:.25}93%{opacity:1}95%{opacity:.5}96%{opacity:1}}
+h1 .b{animation:glowB 3s ease-in-out infinite}
+@keyframes glowB{0%,100%{text-shadow:0 0 4px #fff,0 0 12px var(--cyan),0 0 28px var(--cyan),0 0 60px var(--cyan)}50%{text-shadow:0 0 4px #fff,0 0 20px var(--cyan),0 0 46px var(--cyan),0 0 90px var(--cyan)}}
+.floor{animation:floorPulse 4s ease-in-out infinite}
+@keyframes floorPulse{0%,100%{opacity:.7}50%{opacity:1}}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-75%;width:45%;height:100%;background:linear-gradient(120deg,transparent,#ffffff88,transparent);transform:skewX(-20deg);animation:shine 3.2s infinite}
+@keyframes shine{0%{left:-75%}55%,100%{left:130%}}
+.night.in .bar{animation:growBar 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes growBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.bar{transform-origin:left}
+.cards .card:nth-child(odd).reveal:not(.in){transform:translateX(-50px)}
+.cards .card:nth-child(even).reveal:not(.in){transform:translateX(50px)}
+.cats .cat:nth-child(2).reveal{transition-delay:.08s}.cats .cat:nth-child(3).reveal{transition-delay:.16s}
+.cats .cat:nth-child(4).reveal{transition-delay:.24s}.cats .cat:nth-child(5).reveal{transition-delay:.32s}.cats .cat:nth-child(6).reveal{transition-delay:.4s}
+.signup form.reveal:not(.in){transform:scale(.96)}
+.facts li{transition:transform .2s,border-color .2s}
+.facts li:hover{transform:translateX(6px);border-color:var(--lime)}
+
 /* animaties: neon-puls, zwevend logo, scanlines en stagger */
 @keyframes neonPulse{0%,100%{box-shadow:0 0 0 2px #ff2bd655,0 0 28px var(--pink),0 0 70px #ff2bd677}50%{box-shadow:0 0 0 4px #ff2bd677,0 0 46px var(--pink),0 0 110px #ff2bd6aa}}
 .btn{animation:neonPulse 2.6s ease-in-out infinite}
@@ -190,7 +211,7 @@ footer .big{font-family:Monoton,cursive;font-size:clamp(28px,6vw,54px);color:#ff
 <nav><div class="wrap">
   <a class="logo" href="#top">BC ASSEN // NACHT</a>
   <div class="links">
-    <a href="#ervaring">Ervaring</a><a href="#hoe">Hoe</a><a href="#categorieen">Categorieën</a><a class="btn-sm" href="#inschrijven">Inschrijven</a>
+    <a class="btn-sm" href="#inschrijven">Inschrijven</a>
   </div>
 </div></nav>
 
