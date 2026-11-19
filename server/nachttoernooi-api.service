@@ -1,0 +1,13 @@
+[Unit]
+Description=Nachttoernooi aanmeld-API
+After=network-online.target
+
+[Service]
+User=william
+ExecStart=/usr/bin/python3 /var/www/nachttoernooi/server/api.py
+Environment=NT_DB=/var/lib/nachttoernooi/aanmeldingen.db
+Environment=NT_MAIL_HOOK=https://script.google.com/macros/s/AKfycbz4PRG11iYY1C6axZDKAtr0jap_ieMN_iHujldKYSM_4_Pnt67Ej6xUSEOv20QIQWOYCQ/exec
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

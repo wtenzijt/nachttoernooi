@@ -1,0 +1,8 @@
+:80 {
+	root * /var/www/nachttoernooi
+	@hidden path /.git /.git/* /server /server/*
+	respond @hidden 404
+	reverse_proxy /api/* 127.0.0.1:8090
+	encode gzip
+	file_server
+}
